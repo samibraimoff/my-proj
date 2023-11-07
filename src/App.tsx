@@ -3,13 +3,12 @@ import './styles/index.scss'
 import { Link } from "react-router-dom"
 import { AboutPage } from "./pages/about-page/about-page-lazy"
 import { MainPage } from "./pages/main-page/main-page-lazy"
-import { useContext, useState } from "react"
-import { Theme, ThemeContext } from "./theme/theme-context"
 import { useTheme } from "./theme/useTheme"
+import { classnames } from "./helpers/classnames"
 
 export const App = () => {
   const {theme, toggleTheme} = useTheme()
-    return <div className={`app ${theme}`}>
+    return <div className={classnames('app', {}, [theme])}>
         <nav>
             <Link to='/about'>about</Link>
             <Link to='/'>main</Link>
