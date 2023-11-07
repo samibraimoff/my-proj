@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom"
 import './styles/index.scss'
 import { Link } from "react-router-dom"
-import { AboutPage } from "./pages/about-page/about-page-lazy"
-import { MainPage } from "./pages/main-page/main-page-lazy"
-import { useTheme } from "./theme/useTheme"
-import { classnames } from "./helpers/classnames"
+import { AboutPage } from "pages/about-page"
+import { MainPage } from "pages/main-page"
+import { useTheme } from "app/providers/theme"
+import { classnames } from "shared/lib/helpers/classnames"
 
 export const App = () => {
   const {theme, toggleTheme} = useTheme()
