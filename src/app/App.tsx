@@ -4,15 +4,13 @@ import { useTheme } from "app/providers/theme"
 import { classnames } from "shared/lib/helpers/classnames"
 import { AppRouter } from "app/providers/router"
 import { Suspense } from 'react'
+import { Navbar } from 'widgets/navbar'
 
 export const App = () => {
   const {theme, toggleTheme} = useTheme()
     return <div className={classnames('app', {}, [theme])}>
-        <nav>
-            <Link to='/about'>about</Link>
-            <Link to='/'>main</Link>
-            <button onClick={toggleTheme}>theme</button>
-        </nav>
+        <Navbar />
+        <button onClick={toggleTheme}>theme</button>
         <Suspense fallback='loading'>
             <AppRouter />
         </Suspense>
