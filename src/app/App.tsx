@@ -1,16 +1,18 @@
 import './styles/index.scss'
-import { Link } from "react-router-dom"
-import { useTheme } from "app/providers/theme"
 import { classnames } from "shared/lib/helpers/classnames"
 import { AppRouter } from "app/providers/router"
 import { Suspense } from 'react'
 import { Navbar } from 'widgets/navbar'
+import { useTheme } from "app/providers/theme"
+import { ThemeSwitcher } from 'widgets/theme-switcher'
+
 
 export const App = () => {
-  const {theme, toggleTheme} = useTheme()
+  
+    const {theme} = useTheme();
     return <div className={classnames('app', {}, [theme])}>
         <Navbar />
-        <button onClick={toggleTheme}>theme</button>
+        <ThemeSwitcher />
         <Suspense fallback='loading'>
             <AppRouter />
         </Suspense>

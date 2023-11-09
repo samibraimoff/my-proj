@@ -4,6 +4,15 @@ import { BuildOptions } from './types'
 
 export const buildLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
 
+    const svgLoader = {
+        test: /\.svg$/,
+        use: [
+            {
+                loader: '@svgr/webpack'
+            }
+        ]
+    }
+
     const cssLoader = {
         test: /\.s[ac]ss$/i,
         use: [
@@ -29,5 +38,14 @@ export const buildLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
         exclude: /node_modules/
     }
 
-    return [tsLoader, cssLoader]
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+            {
+                loader: 'file-loader'
+            }
+        ]
+    }
+
+    return [svgLoader, fileLoader, tsLoader, cssLoader]
 }
