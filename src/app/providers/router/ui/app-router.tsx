@@ -5,10 +5,10 @@ import { routeConfig } from "shared/config/route-config/route-config"
 
 export const AppRouter = () => {
     return (
-        <Routes>
-             {
-                Object.values(routeConfig).map(({element, path}) => <Route element={element} path={path} key={path}/>)
-             }
-        </Routes>
+            <Routes>
+                {
+                    Object.values(routeConfig).map(({element, path}) => <Route element={<div className="page-wrapper">{element}</div>} path={path} key={path}/>)
+                }
+            </Routes>
     )
 }

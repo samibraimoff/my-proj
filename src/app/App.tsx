@@ -4,17 +4,19 @@ import { AppRouter } from "app/providers/router"
 import { Suspense } from 'react'
 import { Navbar } from 'widgets/navbar'
 import { useTheme } from "app/providers/theme"
-import { ThemeSwitcher } from 'widgets/theme-switcher'
+import { Sidebar } from 'widgets/sidebar'
 
 
 export const App = () => {
-  
     const {theme} = useTheme();
+
     return <div className={classnames('app', {}, [theme])}>
         <Navbar />
-        <ThemeSwitcher />
-        <Suspense fallback='loading'>
-            <AppRouter />
-        </Suspense>
+        <div className='content-page'>
+            <Sidebar />
+            <Suspense fallback='loading'>
+                <AppRouter />
+            </Suspense>
+        </div>
     </div>
 }
