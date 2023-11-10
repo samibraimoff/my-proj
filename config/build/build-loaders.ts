@@ -4,6 +4,26 @@ import { BuildOptions } from './types'
 
 export const buildLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
 
+    const babelLoader = {
+        test: /\.(js|tsx|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ['@babel/preset-env'],
+            "plugins": [
+                ["i18next-extract", {
+                "locales": [
+                  "en",
+                  "ru"
+                ],
+                "keyAsDefaultValue": true
+              }]
+              ]
+          }
+        }
+      }
+
     const svgLoader = {
         test: /\.svg$/,
         use: [
@@ -47,5 +67,5 @@ export const buildLoaders = (options: BuildOptions): webpack.RuleSetRule[] => {
         ]
     }
 
-    return [svgLoader, fileLoader, tsLoader, cssLoader]
+    return [svgLoader, fileLoader, babelLoader, tsLoader, cssLoader]
 }
