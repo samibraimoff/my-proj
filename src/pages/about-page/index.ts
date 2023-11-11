@@ -1,5 +1,5 @@
-import {AboutPage} from './ui/about-page-lazy'
+import { AboutPage } from './ui/about-page-lazy'
 
 export {
-    AboutPage
+  AboutPage
 }

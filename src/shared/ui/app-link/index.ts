@@ -1,5 +1,5 @@
-import { AppLink, AppLinkTheme } from "./app-link";
+import { AppLink, AppLinkTheme } from './app-link'
 
 export {
-    AppLink, AppLinkTheme
+  AppLink, AppLinkTheme
 }

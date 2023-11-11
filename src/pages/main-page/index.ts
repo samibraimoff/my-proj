@@ -1,5 +1,5 @@
-import {MainPage} from './ui/main-page-lazy'
+import { MainPage } from './ui/main-page-lazy'
 
 export {
-    MainPage
+  MainPage
 }
