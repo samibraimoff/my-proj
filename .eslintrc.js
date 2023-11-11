@@ -49,7 +49,8 @@ module.exports = {
         'react/no-deprecated': 'off',
         'react/strict-boolean-expressions': 'off',
         '@typescript-eslint/strict-boolean-expressions':'off',
-        'i18next/no-literal-string': [2, {markupOnly: true}]
+        'i18next/no-literal-string': [2, {markupOnly: true}],
+        'max-len': [2, 120, 4, {"ignoreComments": true, "ignoreUrls": true}]
     },
     globals: {
         IS_DEV: true

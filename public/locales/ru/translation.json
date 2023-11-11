@@ -1,3 +1,5 @@
 {
-    "language": "En"
+    "language": "En",
+    "pageNotFound": "Страница не найдена, 404",
+    "returnToMainPage": "На главную страницу"
 }

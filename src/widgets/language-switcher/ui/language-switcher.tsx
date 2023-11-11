@@ -14,7 +14,10 @@ export const LanguageSwitcher = ({ className }: LangSwitcherProps): JSX.Element 
     void i18n.changeLanguage(i18n.language === 'en' ? 'ru' : 'en')
   }
   return (
-    <Button theme={ButtonTheme.CLEAR} onClick={changeLanguage} className={classnames(styles.langSwitcher, {}, [className ?? ''])}>
+    <Button
+      theme={ButtonTheme.CLEAR}
+      onClick={changeLanguage}
+      className={classnames(styles.langSwitcher, {}, [className ?? ''])}>
       {t('language')}
     </Button>
   )

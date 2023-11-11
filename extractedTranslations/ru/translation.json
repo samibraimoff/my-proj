@@ -3,5 +3,9 @@
   "about": "about",
   "language": "language",
   "loading": "loading",
-  "main": "main"
+  "main": "main",
+  "pageNotFound": "pageNotFound",
+  "return": "return",
+  "returnToMain": "returnToMain",
+  "returnToMainPage": "returnToMainPage"
 }
