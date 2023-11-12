@@ -1,5 +1,7 @@
 {
     "language": "En",
     "pageNotFound": "Страница не найдена, 404",
-    "returnToMainPage": "На главную страницу"
+    "returnToMainPage": "На главную страницу",
+    "pageErrorMessage": "Что-то пошло не так, попробуйте еще раз и перезагрузите страницу.",
+    "reloadPage": "Перегрузить страницу"
 }

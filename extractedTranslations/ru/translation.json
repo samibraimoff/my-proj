@@ -4,7 +4,11 @@
   "language": "language",
   "loading": "loading",
   "main": "main",
+  "pageError": "pageError",
+  "pageErrorMessage": "pageErrorMessage",
   "pageNotFound": "pageNotFound",
+  "reload page": "reload page",
+  "reloadPage": "reloadPage",
   "return": "return",
   "returnToMain": "returnToMain",
   "returnToMainPage": "returnToMainPage"
