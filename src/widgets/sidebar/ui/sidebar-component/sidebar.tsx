@@ -1,4 +1,4 @@
-import { classnames } from 'shared/lib/helpers/classnames'
+import { classnames } from 'shared/lib/classnames/classnames'
 import styles from './sidebar.module.scss'
 import { useState } from 'react'
 import { ThemeSwitcher } from 'widgets/theme-switcher'
@@ -17,7 +17,9 @@ export const Sidebar = (props: SidebarProps): JSX.Element => {
   }
 
   return (
-    <div className={classnames(styles.sidebar, { [styles.collapsed]: collapsed }, [className ?? ''])}>
+    <div
+      data-testid='sidebar'
+      className={classnames(styles.sidebar, { [styles.collapsed]: collapsed }, [className ?? ''])}>
       <button onClick={onToggle}>toggle</button>
       <div className={styles.switchers}>
         <ThemeSwitcher />

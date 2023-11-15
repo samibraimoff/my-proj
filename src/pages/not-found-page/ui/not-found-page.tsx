@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import styles from './not-found-page.module.scss'
-import { classnames } from 'shared/lib/helpers/classnames'
+import { classnames } from 'shared/lib/classnames/classnames'
 import { AppLink, AppLinkTheme } from 'shared/ui/app-link'
 
 interface NotFoundPageProps {

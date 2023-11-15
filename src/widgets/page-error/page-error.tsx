@@ -1,4 +1,4 @@
-import { classnames } from 'shared/lib/helpers/classnames'
+import { classnames } from 'shared/lib/classnames/classnames'
 import styles from './page-error.module.scss'
 import { useTranslation } from 'react-i18next'
 import { Button, ButtonTheme } from 'shared/ui/button'
