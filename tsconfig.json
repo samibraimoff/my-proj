@@ -21,6 +21,6 @@
         }
     },
     "include": [
-        "./config/jest/setupTests.ts", "src"
+        "./config/jest/setupTests.ts", "src", "config"
     ]
 }
